@@ -1,0 +1,15 @@
+<div class="barra-interaccion">
+  <div class="logo">
+    ⚡
+  </div>
+  <div class="botones">
+    <button 
+      *ngFor="let cat of categorias"
+      (click)="seleccionar(cat.id)"
+      [class.activo]="esActivo(cat.id)"
+      class="btn-categoria">
+      <span class="icono">{{ cat.icono }}</span>
+      <span class="label">{{ cat.label }}</span>
+    </button>
+  </div>
+</div>
